@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to join two arrays.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function merge(a1,a2)
+{
+	let a3=[];
+    let i=0,l=a1.length;
+   	for(i=0;i<l;i++)
+    {
+    	a3[i]={"id":a1[i].id,"name":a1[i].name,"age":a1[i].age,"add":a2[i].add};
+    }
+    return a3;
+}
+function myFunction() {
+    let arr1 =  [{id:1,name:'amit',age:23},{id:2,name:'akash',age:24},{id:3,name:'arun',age:22}];
+    var arr2 = [{id:1, add : 'india'},{id:3, add:'india'},{id:2,add:'india'}];
+    var children =merge(arr1,arr2);
+    document.getElementById("demo").innerHTML = children;
+    console.log(children[1].id +"  " +children[1].name + " " +children[1].add + ""+children[1].age);
+}
+</script>
+
+</body>
+</html>
